@@ -1,0 +1,103 @@
+---
+import Logo from "../components/Logo.astro";
+
+const navLinks = [
+  { name: "Beneficios", href: "#" },
+  { name: "Demo", href: "#" },
+  { name: "Sobre nosotros", href: "#" },
+];
+---
+
+<header class="h-16 text-white p-8 py-12" transition:persist>
+  <nav class="group flex h-full w-full items-center justify-between mx-auto md:max-w-[1060px]" id="navPrincipal">
+    <div class="flex items-center gap-14">
+      <div class="text-2xl font-bold">
+        <Logo />
+      </div>
+      <div class="hidden md:flex gap-12">
+        {navLinks.map(link => (
+          <a href={link.href} class="text-white text-base font-light transition duration-300 ease-in-out hover:text-green-500">{link.name}</a>
+        ))}
+      </div>
+    </div>
+    <div class="md:hidden">
+      <button id="menuButton" class="focus:outline-none flex items-center">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="hidden md:block">
+      <button class="bg-white text-green-600 font-bold py-2 px-6 rounded transition duration-300 ease-in-out hover:text-white hover:bg-green-600">
+        Contáctanos
+      </button>
+    </div>
+    <div
+      class="fixed inset-0 z-[888] flex w-screen flex-col items-center overflow-x-auto gradient px-8 py-4 lg:hidden"
+			id="menuMobileContent"
+    >
+      <aside class="flex min-h-16 w-full items-center justify-between">
+				<span class="text-lg font-semibold text-primary">Menú</span>
+        <button id="innerMenuButton" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+			</aside>
+			<nav class="flex w-full flex-col items-center gap-5">
+				<hr
+					class="h-[2px] w-full border-t-0"
+					style="background:linear-gradient(to right, transparent 0%, white 50%, transparent 100%)"
+				/>
+				{
+          navLinks.map(link => (
+            <>
+              <a href={link.href} class="hover:text-gray-400 relative flex flex-col items-center justify-center gap-2 text-xl capitalize">{link.name}</a>
+              <hr
+                class="h-[2px] w-full border-t-0"
+                style="background:linear-gradient(to right, transparent 0%, white 50%, transparent 100%)"
+              />
+            </>
+          ))
+				}
+			</nav>
+    </div>
+  </nav>
+</header>
+
+
+<style>
+	#menuMobileContent {
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.3s;
+		scrollbar-gutter: stable;
+	}
+
+	#menuMobileContent.open {
+		opacity: 1 !important;
+		pointer-events: all;
+	}
+
+	@media (prefers-reduced-motion) {
+		#menuMobileContent {
+			transition: opacity 0s;
+		}
+	}
+</style>
+
+<script>
+  const nav = document.getElementById("navPrincipal");
+  const menuButton = document.getElementById("menuButton");
+  const innerMenuButton = document.getElementById("innerMenuButton");
+
+  menuButton?.addEventListener("click", () => toggleMenu(nav))
+  innerMenuButton?.addEventListener("click", () => toggleMenu(nav))
+
+  function toggleMenu(nav: HTMLElement | null) {
+    document.getElementById("menuMobileContent")?.classList.toggle("open")
+    nav?.classList.toggle("open")
+    document.body.classList.toggle("overflow-hidden")
+    document.body.classList.toggle("lg:overflow-auto")
+  }
+</script>

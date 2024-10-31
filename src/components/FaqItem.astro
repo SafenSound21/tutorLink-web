@@ -1,0 +1,13 @@
+---
+const { question, answer, id } = Astro.props;
+---
+
+<div class="accordion bg-[#362C85] rounded-lg mb-4 cursor-pointer">
+  <div class="flex justify-between items-center p-4 header">
+    <p class="select-none text-white">{question}</p>
+    <span class="text-gray-400 toggle-icon select-none">→</span>
+  </div>
+  <div class="bg-[#251e5a] p-4 rounded-b-lg text-white answer hidden transition duration-1000 ease-in-out">
+    <p class="select-none">{answer}</p>
+  </div>
+</div>

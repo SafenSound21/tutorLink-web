@@ -1,0 +1,60 @@
+---
+import FaqItem from '../components/FaqItem.astro';
+
+const faqs = [
+  {
+    question: "¿Puedo modificar o cancelar una tutoría?",
+    answer: "Al realizar la reserva de la tutoría, se enviará un mail tanto al padre cómo al profesor. En caso de modificar o cancelar la tutoría simplemente accede al mail y te dará la opción.",
+    id: "p1",
+  },
+  {
+    question: "¿Cómo poner las horas disponibles en el programa?",
+    answer: "Como parte de nuestro proceso de implementación, les proporcionaremos un vídeo explicativo el cual mostrará cómo configurar las horas disponibles en el programa. Este recurso asegurará que el proceso sea claro y comprensible.",
+    id: "p2",
+  },
+  {
+    question: "¿Cómo puedo ver mi calendario de tutorías?",
+    answer: "Una vez se haya realizado la reserva de tutoría, la cita se guardará automáticamente en el calendario del mail proporcionado.",
+    id: "p3",
+  },
+  {
+    question: "¿Qué hago si tengo problemas técnicos?",
+    answer: "En caso de errores con el programa o dudas acerca de su funcionamiento, podrán contactar con nuestro equipo técnico mediante correo o llamada telefónica.",
+    id: "p4",
+  }
+];
+---
+
+<section class="bg-gray-100 p-8 py-12">
+  <div class="container mx-auto md:max-w-[1060px]">
+    <h2 class="text-2xl font-bold text-[#362C85] text-center mb-8">Preguntas frecuentes</h2>
+    <div class="flex flex-col">
+      {faqs.map(faq => (
+        <FaqItem question={faq.question} answer={faq.answer} />
+      ))}
+    </div>
+  </div>
+</section>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const accordions = document.querySelectorAll('.accordion');
+
+    accordions.forEach(accordion => {
+      const header = accordion.querySelector('.header');
+      const answerDiv = accordion.querySelector('.answer');
+      const iconSpan = accordion.querySelector('.toggle-icon');
+
+      header?.addEventListener('click', () => {
+        if (answerDiv?.classList.contains('hidden')) {
+          answerDiv.classList.remove('hidden');
+          if (iconSpan) iconSpan.innerHTML = '−';
+        } else {
+          answerDiv?.classList.add('hidden');
+          if (iconSpan) iconSpan.innerHTML = '→';
+        }
+      });
+    });
+  });
+</script>

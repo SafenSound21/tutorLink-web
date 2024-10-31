@@ -1,0 +1,11 @@
+---
+const { title, description, icon } = Astro.props;
+---
+
+<div class="bg-white shadow-lg rounded-2xl p-8 flex flex-col items-center text-center transform transition-transform hover:scale-105 hover:shadow-2xl duration-300 border-t-4 border-transparent hover:border-t-[#01B161]">
+  <div class="h-16 w-16 mb-6 flex items-center justify-center bg-gradient-to-br from-[#362C85] to-[#1C1935] rounded-full shadow-md">
+    <img src={"/icons/" + icon} alt="icon" class="h-8 w-8"/>
+  </div>
+  <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-[#01B161]">{title}</h3>
+  <p class="text-gray-600 text-sm leading-relaxed">{description}</p>
+</div>
