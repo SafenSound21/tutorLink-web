@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../sections/Header.astro";
+import PolicyText from '../content/policies/privacy.md';
+---
+
+<Layout title="Política de privacidad">
+  <div>
+    <div class="gradient">
+      <Header />
+    </div>
+    <div class="max-w-3xl mx-auto p-12 bg-white rounded-lg">
+      <h1 class="text-3xl font-bold mb-8 text-gray-800">Política de Privacidad</h1>
+      <div class="prose prose-lg text-gray-700">
+        <PolicyText />
+      </div>
+    </div>
+  </div>
+  
+</Layout>
+
+<style is:global>
+	.gradient {
+		background: radial-gradient(circle at 40% 100%, #362C85 0%, #1C1935 100%);
+	}
+</style>
