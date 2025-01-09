@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Header from "../sections/Header.astro";
+import ContactForm from "../components/ContactForm.astro";
+import Footer from "../sections/Footer.astro";
+---
+
+<Layout title="Contáctanos">
+  <div class="gradient">
+    <Header />
+  </div>
+  <main>
+    <div class="p-8 py-12 md:max-w-[1200px] mx-auto xl:px-0 flex flex-col lg:items-center gap-12">
+      <div>
+        <h1 class="text-3xl font-bold tracking-tight sm:text-4xl text-[#362C85] lg:text-center">Estamos aquí para ayudarte</h1>
+      </div>
+      <ContactForm />
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style is:global>
+	.gradient {
+		background: radial-gradient(circle at 40% 100%, #362C85 0%, #1C1935 100%);
+	}
+</style>
