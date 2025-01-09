@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Header from '../sections/Header.astro';
+import Footer from '../sections/Footer.astro';
+---
+
+<Layout title="Sobre Nosotros - TutorLink">
+  <div class="gradient">
+    <Header />
+  </div>
+	<main class="bg-white">
+		<!-- Impact Metrics Section -->
+		<div class="bg-white py-16 pb-20">
+			<div class="mx-auto px-6 lg:px-8">
+				<div class="mx-auto lg:text-center">
+					<h2 class="text-base font-semibold leading-7 text-[#362C85]">Nuestro Impacto</h2>
+					<p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Transformando la Educación</p>
+				</div>
+        <div class="flex mt-12 md:mt-24 justify-center">
+          <h3 class="text-2xl font-bold bg-[#362C85] text-white text-center">TutorLink en números:</h3>
+        </div>
+				<div class="mx-auto mt-12 flex flex-col md:flex-row justify-center gap-14 sm:mt-14">         
+					<div class="flex flex-col items-center">
+						<div class="text-[#362C85] text-6xl font-bold">400+</div>
+						<div class="mt-2 text-sm text-gray-600 text-center">Tutorías Agendadas</div>
+					</div>
+					<div class="flex flex-col items-center">
+						<div class="text-6xl font-bold text-[#362C85]">6</div>
+						<div class="mt-2 text-sm text-gray-600 text-center">Centros Educativos</div>
+					</div>
+					<div class="flex flex-col items-center">
+						<div class="text-6xl font-bold text-[#362C85]">70+</div>
+						<div class="mt-2 text-sm text-gray-600 text-center">Horas Ahorradas</div>
+					</div>
+					<div class="flex flex-col items-center">
+						<div class="text-6xl font-bold text-[#362C85]">100%</div>
+						<div class="mt-2 text-sm text-gray-600 text-center">Satisfacción</div>
+					</div>
+				</div>
+				
+        
+			</div>
+		</div>
+
+		<!-- Values Section -->
+		<div class="bg-gray-100 py-16 pb-20">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="mx-auto max-w-2xl lg:text-center">
+					<h2 class="text-base font-semibold leading-7 text-[#362C85]">Nuestros Valores</h2>
+					<p class="mt-2 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl">Lo que nos define</p>
+				</div>
+				<div class="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-8 sm:mt-20 lg:grid-cols-3">
+					<div class="relative p-6 bg-[#362C85] rounded-xl shadow-sm">
+						<h3 class="text-xl font-semibold text-white mb-4">Innovación Práctica</h3>
+						<p class="text-white">
+							Desarrollamos soluciones que realmente resuelven problemas cotidianos. Cada función de TutorLink nace de una necesidad real observada en los centros educativos.
+						</p>
+					</div>
+					<div class="relative p-6 bg-[#362C85] rounded-xl shadow-sm">
+						<h3 class="text-xl font-semibold text-white mb-4">Compromiso Educativo</h3>
+						<p class="text-white">
+							Creemos en el poder de la colaboración entre familias y centros. Facilitamos esta conexión para mejorar la experiencia educativa de cada estudiante.
+						</p>
+					</div>
+					<div class="relative p-6 bg-[#362C85] rounded-xl shadow-sm">
+						<h3 class="text-xl font-semibold text-white mb-4">Eficiencia Simple</h3>
+						<p class="text-white">
+							La simplicidad es clave. Transformamos procesos complejos en interacciones sencillas que ahorran tiempo y recursos valiosos.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Vision Section -->
+		<div class="bg-white py-24">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="mx-auto max-w-3xl lg:text-center">
+					<h2 class="text-base font-semibold leading-7 text-[#362C85]">Nuestra Visión</h2>
+					<p class="mt-2 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl mb-8">Transformando la Educación en España</p>
+					<p class="text-lg leading-8 text-gray-600">
+						En TutorLink, creemos que la educación básica en España merece herramientas del siglo XXI. Nuestra misión es digitalizar y optimizar los procesos administrativos que aún consumen valioso tiempo de educadores y familias. Comenzando con la gestión de tutorías, estamos construyendo un futuro donde la tecnología facilita, no complica, permitiendo que los centros educativos se enfoquen en lo que realmente importa: la educación de nuestros estudiantes.
+					</p>
+				</div>
+			</div>
+		</div>
+	</main>
+  <Footer />
+</Layout>
+
+
+<style is:global>
+	.gradient {
+		background: radial-gradient(circle at 40% 100%, #362C85 0%, #1C1935 100%);
+	}
+</style>

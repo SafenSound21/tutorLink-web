@@ -1,0 +1,127 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Header from '../sections/Header.astro';
+import Footer from '../sections/Footer.astro';
+---
+
+<Layout title="TutorLink - Gestión de Tutorías Simple y Efectiva">
+  <div class="gradient">
+    <Header />
+  </div>
+	<main class="bg-white">
+		<!-- Value Proposition Section -->
+		<div class="bg-white p-8 py-16 md:max-w-[1200px] mx-auto">
+			<div class="mx-auto px-6 lg:px-0">
+				<div class="mx-auto">
+					<h2 class="text-base font-semibold leading-7 text-[#362C85] text-center">Para Centros Educativos</h2>
+					<p class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-gray-800 text-center">
+						Optimiza la comunicación con las familias
+					</p>
+					<p class="mt-6 text-lg leading-8 text-gray-600 text-center">
+						En el entorno educativo actual, la comunicación efectiva entre el centro y las familias es fundamental. TutorLink no solo automatiza la gestión de tutorías, sino que también fortalece los lazos con tu comunidad educativa, permitiéndote enfocarte en lo que realmente importa: la educación de tus alumnos.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Benefits Grid -->
+		<div class="py-24 sm:py-18 border-t-2 pb-40">
+			<div class="mx-auto px-6 md:max-w-[1200px] lg:px-0">
+				<div class="mx-auto">
+					<h2 class="text-base font-semibold leading-7 text-[#362C85] text-center">Beneficios</h2>
+					<p class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-center">Todo lo que necesitas para una gestión eficiente</p>
+				</div>
+				<div class="mx-auto mt-16">
+					<div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3 px-8">
+						<!-- Eficiencia Administrativa -->
+						<div class="relative pl-16">
+							<div class="text-base font-semibold leading-7 ">
+								<div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-[#4a3cb5]">
+									⚡
+								</div>
+								Eficiencia Administrativa
+							</div>
+							<div class="mt-2 text-base leading-7 ">
+								Reduce hasta un 70% el tiempo dedicado a la gestión de tutorías. Automatiza la programación, recordatorios y seguimiento.
+							</div>
+						</div>
+
+						<!-- Comunicación Instantánea -->
+						<div class="relative pl-16">
+							<div class="text-base font-semibold leading-7 ">
+								<div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-[#4a3cb5]">
+									💬
+								</div>
+								Comunicación Instantánea
+							</div>
+							<div class="mt-2 text-base leading-7 ">
+								Conecta con las familias a través de WhatsApp, su canal preferido. Sin apps adicionales ni complicaciones.
+							</div>
+						</div>
+
+						<!-- Seguimiento Detallado -->
+						<div class="relative pl-16">
+							<div class="text-base font-semibold leading-7 ">
+								<div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-[#4a3cb5]">
+									📊
+								</div>
+								Seguimiento Detallado
+							</div>
+							<div class="mt-2 text-base leading-7 ">
+								Mantén un registro completo de todas las tutorías, temas tratados y acuerdos alcanzados.
+							</div>
+						</div>
+
+						<!-- Satisfacción Familiar -->
+						<div class="relative pl-16">
+							<div class="text-base font-semibold leading-7 ">
+								<div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-[#4a3cb5]">
+									❤️
+								</div>
+								Satisfacción Familiar
+							</div>
+							<div class="mt-2 text-base leading-7 ">
+								Mejora la experiencia de las familias con tu centro educativo. Facilita la comunicación y muestra profesionalismo.
+							</div>
+						</div>
+
+						<!-- Ahorro de Recursos -->
+						<div class="relative pl-16">
+							<div class="text-base font-semibold leading-7 ">
+								<div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-[#4a3cb5]">
+									💰
+								</div>
+								Ahorro de Recursos
+							</div>
+							<div class="mt-2 text-base leading-7 ">
+								Optimiza el tiempo del personal administrativo y docente. Reduce costes asociados a la gestión manual.
+							</div>
+						</div>
+
+						<!-- Análisis y Mejora -->
+						<div class="relative pl-16">
+							<dt class="text-base font-semibold leading-7">
+								<div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-[#4a3cb5]">
+									📈
+								</div>
+								Análisis y Mejora
+							</dt>
+							<dd class="mt-2 text-base leading-7">
+								Obtén insights valiosos sobre la participación familiar y la efectividad de las tutorías.
+							</dd>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+  <Footer />
+</Layout>
+
+<style is:global>
+	.gradient {
+		background: radial-gradient(circle at 40% 100%, #362C85 0%, #1C1935 100%);
+	}
+</style>

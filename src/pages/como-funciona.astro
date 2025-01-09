@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Header from '../sections/Header.astro';
+import Footer from '../sections/Footer.astro';
+---
+
+<Layout title="Comó funciona TutorLink">
+  <div class="gradient">
+    <Header />
+  </div>
+  <main>
+    <div>
+      <div class="md:max-w-[1200px] mx-auto p-8 py-16 pb-24">
+        <h1 class="sm:text-4xl font-bold text-[#362C85]">Desde WhatsApp a la Agenda: Todo Simplificado</h1>
+        <p class="mt-6 leading-8 text-gray-600 ">En el mundo actual, la comunicación entre padres y escuelas es más importante que nunca. Nuestro software simplifica y agiliza ese proceso utilizando una herramienta que todos conocemos y usamos a diario: <strong>WhatsApp.</strong></p>
+        <p class="mt-6 leading-8 text-gray-600 ">Con nuestra plataforma, la gestión de tutorías escolares se transforma en un proceso sencillo y eficiente:</p>
+        <ul class="mt-6 leading-8 text-gray-600 list-disc list-inside pl-4">
+          <li>Los padres y maestros se conectan de manera rápida y segura a través de WhatsApp.</li>
+          <li>El sistema organiza y agenda automáticamente las reuniones según la disponibilidad de ambas partes.</li>
+        </ul>
+        <p class="mt-6 leading-8 text-gray-600 ">El resultado: menos estrés, mejor comunicación y más tiempo dedicado a lo que realmente importa: el éxito de los estudiantes.</p>  
+      </div>
+
+      <div class="bg-white py-24 border-t-2 pb-40">
+        <div class="mx-auto px-6 lg:px-0 md:max-w-[1200px]">
+          <div class="mx-auto lg:text-center">
+            <h2 class="text-base font-semibold leading-7 text-[#362C85]">Proceso Simple</h2>
+            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl">¿Cómo funciona?</p>
+          </div>
+          <div class="mx-auto mt-16 sm:mt-20 lg:mt-24 lg:max-w-none">
+            <div class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+              <div class="flex flex-col">
+                <div class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 md:justify-center">
+                  <div class="rounded-lg bg-[#362CB5] text-white p-2">1</div>
+                  Solicitud
+                </div>
+                <div class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                  <p class="flex-auto md:text-center">Los padres envían una solicitud de tutoría a través de WhatsApp en cualquier momento.</p>
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <div class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 md:justify-center">
+                  <div class="rounded-lg bg-[#362CB5] text-white p-2 lg:text-center">2</div>
+                  Coordinación
+                </div>
+                <div class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                  <p class="flex-auto lg:text-center">El sistema coordina automáticamente los horarios disponibles del profesor.</p>
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <div class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 md:justify-center">
+                  <div class="rounded-lg bg-[#362CB5] p-2 text-white">3</div>
+                  Confirmación
+                </div>
+                <div class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                  <p class="flex-auto lg:text-center">Se confirma la cita y se envían recordatorios automáticos a ambas partes.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style is:global>
+	.gradient {
+		background: radial-gradient(circle at 40% 100%, #362C85 0%, #1C1935 100%);
+	}
+</style>

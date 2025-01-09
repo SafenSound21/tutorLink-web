@@ -3,7 +3,7 @@
 
 <section class="p-8 gradient text-white border-b-4 py-24">
 
-  <div class="flex flex-col md:flex-row justify-between mx-auto md:max-w-[1060px] md:gap-20 items-center">
+  <div class="flex flex-col md:flex-row justify-between mx-auto md:max-w-[1200px] md:gap-20 items-center">
     
     <div class="md:w-1/2 mb-6 md:mb-0 md:py-6 flex flex-col md:gap-2 leading-relaxed">
       <h2 class="text-3xl leading-normal font-bold mb-4">¿Listo para transformar la comunicación escolar con TutorLink?</h2>
@@ -17,7 +17,7 @@
     
     <div class="w-full md:w-1/2 bg-white rounded-xl shadow-xl p-8 mt-4 md:mt-0">
       <h3 class="text-[#362C85] text-3xl font-bold">Contáctanos</h3>
-      <form class="mt-8 text-gray-600">
+      <form class="mt-8 text-gray-600" id="contact-form">
         <div class="mb-4">
           <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
           <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#01B161] hover:ring-[#01B161] transition-all duration-300">
@@ -46,3 +46,47 @@
   </div>
   
 </section>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+
+  if (form) {
+
+    form.addEventListener('submit', async function (event: Event) {
+      event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+
+      // Obtener los valores de los campos del formulario
+      const formData = new FormData(event.target as HTMLFormElement);
+      const data: Record<string, string> = {};
+
+      formData.forEach((value, key) => {
+        // Asegurarse de que el valor es un string antes de añadirlo al objeto
+        if (typeof value === 'string') {
+          data[key] = value;
+        }
+      });
+
+      try {
+        // Hacer la solicitud POST a la ruta API
+        const response = await fetch('/api/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        // Manejar la respuesta
+        if (response.ok) {
+          window.location.href = '/confirmation';
+          // Aquí podrías limpiar el formulario o redirigir al usuario, si lo deseas.
+        } else {
+          alert('Hubo un error al enviar el formulario');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Error en la solicitud');
+      }
+  });
+}
+</script>
