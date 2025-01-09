@@ -2,7 +2,7 @@ import { Resend } from "resend";
 
 const resend = new Resend("re_5bMwuwTc_P2FrdPGesAW9XQgGzQY7SUd2");
 
-export async function POST({ request }) {
+export async function POST({request}: { request: Request }): Promise<Response> {
   try {
 
     const formData = await request.json();
